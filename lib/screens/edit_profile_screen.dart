@@ -98,7 +98,6 @@ class _MyWidgetState extends State<EditProfileScreen> {
                   SizedBox(
                     height: 70,
                     width: double.infinity,
-                    //login button
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.pop(context);
@@ -119,7 +118,7 @@ class _MyWidgetState extends State<EditProfileScreen> {
                     ),
                   ),
                   const SizedBox(height: 25),
-                  //Don't have any account button
+
                   SizedBox(
                     width: double.infinity,
                     height: 70,

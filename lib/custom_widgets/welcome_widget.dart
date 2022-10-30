@@ -22,7 +22,6 @@ class Welcome extends StatelessWidget {
                 color: Colors.black.withOpacity(0.5),
                 height: double.infinity,
                 width: double.infinity,
-
                 child: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -47,11 +46,13 @@ class Welcome extends StatelessWidget {
                           Text(
                             "SELL ANYTHING INSTANTLY",
                             style: TextStyle(
-                                fontSize: 11,
+                                fontSize: 10,
                                 fontWeight: FontWeight.w700,
                                 color: Colors.white),
                           ),
-                          SizedBox(height: 25,)
+                          SizedBox(
+                            height: 25,
+                          )
                         ],
                       )
                     ],

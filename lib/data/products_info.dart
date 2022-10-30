@@ -43,10 +43,9 @@ class ProductsInfo {
       "time": 12,
       "contactNumber": 529798765432,
       "description":
-          "Used Macbook. Apple M2 chip, Media engine, 13.3-inch (diagonal) LED-backlit display with IPS technology, 8GB unified memory, 256GB SSD, "
+          "Used Macbook. Apple M2 chip, Media engine, 13.3-inch (diagonal) LED-backlit display with IPS technology, 8GB unified memory, 256GB SSD"
     },
   ];
-
 
   List userList() {
     List userListAdd = [];
@@ -57,7 +56,6 @@ class ProductsInfo {
     }
     return userListAdd;
   }
-
 
   List get ads {
     return _ads;

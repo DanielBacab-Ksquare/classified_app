@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:classified_app/custom_widgets/welcome_widget.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _MyWidgetState();
+  State<RegisterScreen> createState() => _MyWidgetState();
 }
 
-class _MyWidgetState extends State<LoginScreen> {
+class _MyWidgetState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +22,22 @@ class _MyWidgetState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(
-                height: 35,
+                height: 20,
               ),
+              const TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(0))),
+                    labelText: "Full Name",
+                    labelStyle: TextStyle(
+                        fontSize: 30,
+                        color: Color(0xffe5e5e5),
+                        fontWeight: FontWeight.w600)),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+
               const TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -37,6 +51,21 @@ class _MyWidgetState extends State<LoginScreen> {
               const SizedBox(
                 height: 10,
               ),
+
+              const TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(0))),
+                    labelText: "Mobile Number",
+                    labelStyle: TextStyle(
+                        fontSize: 30,
+                        color: Color(0xffe5e5e5),
+                        fontWeight: FontWeight.w600)),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+
               const TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -65,26 +94,27 @@ class _MyWidgetState extends State<LoginScreen> {
                             top: 15, bottom: 15, right: 30, left: 30)),
                     elevation: MaterialStateProperty.all(0),
                     shape: MaterialStateProperty.all<OutlinedBorder>(
-                         RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10))),
                   ),
                   child: const Text(
-                    "Login",
+                    "Register Now",
                     style: TextStyle(fontSize: 27, fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 15),
               //Don't have any account button
               SizedBox(
                 width: double.infinity,
-                height: 70,
+                height: 60,
                 child: TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, "/register");
+                      Navigator.pushNamed(context, "/login");
                     },
-                    child: const Text("Don't have any account?",
+                    child: const Text("Already have an account?",
                         style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 20,
                           fontWeight: FontWeight.w700,
                           color: Color(0xfff25723),
                         ))),

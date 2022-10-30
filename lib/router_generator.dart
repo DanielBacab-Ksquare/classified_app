@@ -4,6 +4,7 @@ import 'screens/home_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/edit_profile_screen.dart';
 import 'screens/my_ads_screen.dart';
+import 'screens/register_screen.dart';
 
 class RouteGenerator {
   var generateRoute = ((settings) {
@@ -24,6 +25,9 @@ class RouteGenerator {
 
       case '/myads':
         return MaterialPageRoute(builder: (context) => MyAdsScreen());
+
+      case '/register':
+        return MaterialPageRoute(builder: (context) => RegisterScreen());
     }
   });
 }
