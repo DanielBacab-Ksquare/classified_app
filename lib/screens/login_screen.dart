@@ -9,21 +9,20 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<LoginScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-      child: Column(
+        body: Center(
+            child: Column(
       children: [
-        //const Welcome(),
+        const Welcome(),
         SizedBox(
-          //width: 350,
+          width: 350,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(
-                height: 15,
+                height: 35,
               ),
               const TextField(
                 decoration: InputDecoration(
@@ -36,10 +35,7 @@ class _MyWidgetState extends State<LoginScreen> {
                         fontWeight: FontWeight.w600)),
               ),
               const SizedBox(
-                height: 15,
-              ),
-              const SizedBox(
-                height: 15,
+                height: 10,
               ),
               const TextField(
                 decoration: InputDecoration(
@@ -52,14 +48,13 @@ class _MyWidgetState extends State<LoginScreen> {
                         fontWeight: FontWeight.w600)),
               ),
               const SizedBox(
-                height: 35,
+                height: 15,
               ),
-              const SizedBox(
-                height: 10,
-              ),
+
               SizedBox(
                 height: 70,
                 width: double.infinity,
+                //login button
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, "/");
@@ -68,8 +63,6 @@ class _MyWidgetState extends State<LoginScreen> {
                     padding: MaterialStateProperty.all<EdgeInsets>(
                         const EdgeInsets.only(
                             top: 15, bottom: 15, right: 30, left: 30)),
-                    // backgroundColor: MaterialStateProperty.all<Color>( const Color(0xff3f72af)),
-                    shadowColor: MaterialStateProperty.all<Color>(Colors.white),
                     elevation: MaterialStateProperty.all(0),
                     shape: MaterialStateProperty.all<OutlinedBorder>(
                         const RoundedRectangleBorder()),
@@ -79,7 +72,17 @@ class _MyWidgetState extends State<LoginScreen> {
                     style: TextStyle(fontSize: 27, fontWeight: FontWeight.w700),
                   ),
                 ),
-              )
+              ),
+              const SizedBox(height: 30),
+              //Don't have any account button
+              TextButton(
+                  onPressed: () {},
+                  child: const Text("Don't have any account",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xfff25723),
+                      )))
             ],
           ),
         ),

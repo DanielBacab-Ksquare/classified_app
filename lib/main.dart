@@ -3,11 +3,11 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:classified_app/styles/theme.dart';
 import 'package:classified_app/router_generator.dart';
 import 'screens/home_screen.dart';
-import 'screens/login_screen.dart';
 
 main() {
-  //var widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  //FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+   var widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  FlutterNativeSplash.remove();
   runApp(MyApp());
 }
 
