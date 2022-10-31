@@ -19,7 +19,7 @@ class Product extends StatelessWidget {
     return Container(
         height: 700,
         width: 350,
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         color: Colors.yellow,
         child: Stack(
           children: [
@@ -36,11 +36,11 @@ class Product extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                height: 70,
+                height: 80,
                 width: double.infinity,
                 color: Colors.black.withOpacity(0.5),
                 padding:
-                    EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 15),
+                    const EdgeInsets.only(top: 10, bottom: 10, left: 10, right: 15),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +52,6 @@ class Product extends StatelessWidget {
                           fontWeight: FontWeight.w700,
                           color: Colors.white),
                     ),
-                    const SizedBox(height: 5),
                     Text(
                       "\$$price",
                       style: const TextStyle(

@@ -14,7 +14,7 @@ class _MyWidgetState extends State<CreateAdScreen> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            "Edit Ad",
+            "Create Ad",
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           elevation: 0,
