@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:classified_app/screens/image_viewer_screen.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   final Map productToDisplay;
@@ -46,6 +47,10 @@ class _MyWidgetState extends State<ProductDetailScreen> {
                   GestureDetector(
                     onTap: () {
                       //here goes the ImageViewerScreen (carousel)
+                       Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ImageViewerScreen(images: widget.productToDisplay["images"],)),
+                      );
 
                     },
                     child: Image.asset(
