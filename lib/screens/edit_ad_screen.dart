@@ -100,6 +100,7 @@ class _MyWidgetState extends State<EditAdScreen> {
                   ),
                   //Price
                   TextFormField(
+                    keyboardType: TextInputType.number,
                     initialValue:
                         widget.productToEdit["product"]["price"].toString(),
                     style: const TextStyle(
@@ -122,6 +123,7 @@ class _MyWidgetState extends State<EditAdScreen> {
 
                   //Contact number
                   TextFormField(
+                    keyboardType: TextInputType.phone,
                     initialValue:
                         "+${widget.productToEdit["product"]["contactNumber"]}",
                     style: const TextStyle(

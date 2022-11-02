@@ -81,7 +81,7 @@ class _MyWidgetState extends State<RegisterScreen> {
               ),
 
               SizedBox(
-                height: 70,
+                height: 60,
                 width: double.infinity,
                 //login button
                 child: ElevatedButton(
@@ -91,7 +91,7 @@ class _MyWidgetState extends State<RegisterScreen> {
                   style: ButtonStyle(
                     padding: MaterialStateProperty.all<EdgeInsets>(
                         const EdgeInsets.only(
-                            top: 15, bottom: 15, right: 30, left: 30)),
+                            top: 10, bottom: 10, right: 30, left: 30)),
                     elevation: MaterialStateProperty.all(0),
                     shape: MaterialStateProperty.all<OutlinedBorder>(
                         RoundedRectangleBorder(
@@ -107,7 +107,7 @@ class _MyWidgetState extends State<RegisterScreen> {
               //Don't have any account button
               SizedBox(
                 width: double.infinity,
-                height: 60,
+                height: 40,
                 child: TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, "/login");

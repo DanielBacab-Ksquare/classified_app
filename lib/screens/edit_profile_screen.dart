@@ -59,6 +59,7 @@ class _MyWidgetState extends State<EditProfileScreen> {
                   ),
                   //Email
                   TextFormField(
+                    keyboardType: TextInputType.emailAddress,
                     initialValue: "daniel.bacab@itksquare.edu.mx",
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
@@ -78,6 +79,7 @@ class _MyWidgetState extends State<EditProfileScreen> {
 
                   //Phone number
                   TextFormField(
+                    keyboardType: TextInputType.phone,
                     initialValue: "+529798765432",
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
