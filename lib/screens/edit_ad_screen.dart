@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class EditAdScreen extends StatefulWidget {
-  final Map productToEdit;
-  const EditAdScreen({super.key, required this.productToEdit});
+  dynamic productToEdit;
+  EditAdScreen({super.key, required this.productToEdit});
 
   @override
   State<EditAdScreen> createState() => _MyWidgetState();
@@ -52,7 +52,7 @@ class _MyWidgetState extends State<EditAdScreen> {
               height: 75,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: widget.productToEdit["images"].length,
+                  itemCount: widget.productToEdit["product"]["images"].length,
                   itemBuilder: ((context, index) {
                     return Container(
                       decoration: BoxDecoration(
@@ -61,7 +61,7 @@ class _MyWidgetState extends State<EditAdScreen> {
                       margin: const EdgeInsets.symmetric(horizontal: 5),
                       padding: const EdgeInsets.symmetric(horizontal: 5),
                       child: Image.asset(
-                        widget.productToEdit["images"][index],
+                        widget.productToEdit["product"]["images"][index],
                         height: 80,
                         width: 80,
                       ),
@@ -80,7 +80,7 @@ class _MyWidgetState extends State<EditAdScreen> {
                   ),
                   //title
                   TextFormField(
-                    initialValue: widget.productToEdit["title"],
+                    initialValue: widget.productToEdit["product"]["title"],
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
@@ -100,7 +100,8 @@ class _MyWidgetState extends State<EditAdScreen> {
                   ),
                   //Price
                   TextFormField(
-                    initialValue: widget.productToEdit["price"].toString(),
+                    initialValue:
+                        widget.productToEdit["product"]["price"].toString(),
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
@@ -121,7 +122,8 @@ class _MyWidgetState extends State<EditAdScreen> {
 
                   //Contact number
                   TextFormField(
-                    initialValue: "+${widget.productToEdit["contactNumber"]}",
+                    initialValue:
+                        "+${widget.productToEdit["product"]["contactNumber"]}",
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
@@ -142,7 +144,8 @@ class _MyWidgetState extends State<EditAdScreen> {
 
                   //Description
                   TextFormField(
-                    initialValue: widget.productToEdit["description"],
+                    initialValue: widget.productToEdit["product"]
+                        ["description"],
                     maxLines: 6,
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),

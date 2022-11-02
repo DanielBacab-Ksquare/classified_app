@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class ImageViewerScreen extends StatefulWidget {
-  final List images;
+  dynamic images;
 
-  const ImageViewerScreen({super.key, required this.images});
+  ImageViewerScreen({super.key, required this.images});
 
   @override
   State<ImageViewerScreen> createState() => _ImageViewerScreenState();
@@ -28,7 +28,7 @@ class _ImageViewerScreenState extends State<ImageViewerScreen> {
           autoPlay: true,
           autoPlayInterval: const Duration(seconds: 3),
         ),
-        itemCount: widget.images.length,
+        itemCount: widget.images["images"].length,
         itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) =>
             Container(
           color: Colors.black,
@@ -36,7 +36,7 @@ class _ImageViewerScreenState extends State<ImageViewerScreen> {
           height: double.infinity,
           child: Center(
               child: Image.asset(
-            widget.images[itemIndex],
+            widget.images["images"][itemIndex],
             width: 235,
             height: 200,
           )),

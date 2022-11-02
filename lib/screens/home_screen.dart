@@ -1,7 +1,6 @@
 import 'package:classified_app/custom_widgets/product.dart';
 import 'package:flutter/material.dart';
 import 'package:classified_app/data/products_info.dart';
-import 'package:classified_app/screens/product_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -37,11 +36,9 @@ class HomeScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             return GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => ProductDetailScreen(
-                              productToDisplay: adsInfo.ads[index])));
+                  Navigator.pushNamed(context, "/productdetail", arguments: {
+                        "product": adsInfo.ads[index],
+                      });
                 },
                 child: Product(
                     image: adsInfo.ads[index]["images"][0],

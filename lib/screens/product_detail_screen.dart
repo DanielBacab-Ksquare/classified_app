@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:classified_app/screens/image_viewer_screen.dart';
 
 class ProductDetailScreen extends StatefulWidget {
-  final Map productToDisplay;
-  const ProductDetailScreen({super.key, required this.productToDisplay});
+  dynamic productToDisplay;
+  ProductDetailScreen({super.key, required this.productToDisplay});
 
   _openNumber(url) async {
     url = Uri.parse(url);
@@ -32,29 +31,27 @@ class _MyWidgetState extends State<ProductDetailScreen> {
                 children: [
                   const SizedBox(height: 15),
                   Text(
-                    widget.productToDisplay["title"],
+                    widget.productToDisplay["product"]["title"],
                     style: const TextStyle(
                         fontSize: 35, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 5,
                   ),
-                  Text("\$${widget.productToDisplay["price"]}",
+                  Text("\$${widget.productToDisplay["product"]["price"]}",
                       style: const TextStyle(
                           fontSize: 20,
                           color: Color(0xffff8540),
                           fontWeight: FontWeight.w700)),
                   GestureDetector(
                     onTap: () {
-                      //here goes the ImageViewerScreen (carousel)
-                       Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ImageViewerScreen(images: widget.productToDisplay["images"],)),
-                      );
-
+                      //here goes the ImageViewerScreen
+                      Navigator.pushNamed(context, "/imageviewer", arguments: {
+                        "images": widget.productToDisplay["product"]["images"],
+                      });
                     },
                     child: Image.asset(
-                      widget.productToDisplay["images"][0],
+                      widget.productToDisplay["product"]["images"][0],
                       height: 250,
                       width: double.infinity,
                     ),
@@ -67,7 +64,7 @@ class _MyWidgetState extends State<ProductDetailScreen> {
                           size: 15,
                           color: Color(0xff898888),
                           Icons.person_outline),
-                      Text(widget.productToDisplay["sellerName"],
+                      Text(widget.productToDisplay["product"]["sellerName"],
                           style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w500,
@@ -78,7 +75,8 @@ class _MyWidgetState extends State<ProductDetailScreen> {
                           size: 15,
                           color: Color(0xff898888),
                           Icons.access_time),
-                      Text(" ${widget.productToDisplay["time"]} days ago",
+                      Text(
+                          " ${widget.productToDisplay["product"]["time"]} days ago",
                           style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w500,
@@ -88,7 +86,7 @@ class _MyWidgetState extends State<ProductDetailScreen> {
                   ),
                   const SizedBox(height: 18),
                   Text(
-                    widget.productToDisplay["description"],
+                    widget.productToDisplay["product"]["description"],
                     style: const TextStyle(fontSize: 17),
                   ),
                   const SizedBox(height: 20),
@@ -99,7 +97,7 @@ class _MyWidgetState extends State<ProductDetailScreen> {
                     child: ElevatedButton(
                       onPressed: () {
                         widget._openNumber(
-                          "tel:+${widget.productToDisplay["contactNumber"]}");
+                            "tel:+${widget.productToDisplay["product"]["contactNumber"]}");
                       },
                       style: ButtonStyle(
                         padding: MaterialStateProperty.all<EdgeInsets>(

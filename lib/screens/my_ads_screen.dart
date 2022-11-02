@@ -1,7 +1,6 @@
 import 'package:classified_app/custom_widgets/my_product.dart';
 import 'package:flutter/material.dart';
 import 'package:classified_app/data/products_info.dart';
-import 'package:classified_app/screens/edit_ad_screen.dart';
 
 class MyAdsScreen extends StatelessWidget {
   MyAdsScreen({super.key});
@@ -24,10 +23,9 @@ class MyAdsScreen extends StatelessWidget {
                 itemBuilder: ((context, index) {
                   return GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => EditAdScreen(productToEdit: adsInfo.userList()[index],)),
-                      );
+                      Navigator.pushNamed(context, "/editad", arguments: {
+                        "product": adsInfo.userList()[index],
+                      });
                     },
                     child: myProduct(
                         image: adsInfo.userList()[index]["images"][0],

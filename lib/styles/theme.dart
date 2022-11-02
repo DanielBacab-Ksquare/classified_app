@@ -5,9 +5,9 @@ class CustomTheme {
   var theme = ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(
+        backgroundColor: MaterialStateProperty.all<Color>(
           const Color(0xfff25723)), //button color
-      foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
     )),
     textTheme: GoogleFonts.robotoTextTheme(),
     appBarTheme: const AppBarTheme(
