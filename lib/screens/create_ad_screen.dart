@@ -61,16 +61,11 @@ class _MyWidgetState extends State<CreateAdScreen> {
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(10),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        labelText: "Title",
-                        alignLabelWithHint: true,
-                        labelStyle: TextStyle(
-                            fontSize: 30,
-                            color: Color(0xffe5e5e5),
-                            fontWeight: FontWeight.w600)),
+                      contentPadding: EdgeInsets.all(10),
+                      border: OutlineInputBorder(),
+                      labelText: "Title",
+                      alignLabelWithHint: true,
+                    ),
                   ),
 
                   const SizedBox(
@@ -81,16 +76,11 @@ class _MyWidgetState extends State<CreateAdScreen> {
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(10),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        labelText: "Price",
-                        alignLabelWithHint: true,
-                        labelStyle: TextStyle(
-                            fontSize: 30,
-                            color: Color(0xffe5e5e5),
-                            fontWeight: FontWeight.w600)),
+                      contentPadding: EdgeInsets.all(10),
+                      border: OutlineInputBorder(),
+                      labelText: "Price",
+                      alignLabelWithHint: true,
+                    ),
                   ),
 
                   const SizedBox(
@@ -102,16 +92,11 @@ class _MyWidgetState extends State<CreateAdScreen> {
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(10),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        labelText: "Contact Number",
-                        alignLabelWithHint: true,
-                        labelStyle: TextStyle(
-                            fontSize: 30,
-                            color: Color(0xffe5e5e5),
-                            fontWeight: FontWeight.w600)),
+                      contentPadding: EdgeInsets.all(10),
+                      border: OutlineInputBorder(),
+                      labelText: "Contact Number",
+                      alignLabelWithHint: true,
+                    ),
                   ),
 
                   const SizedBox(
@@ -124,16 +109,11 @@ class _MyWidgetState extends State<CreateAdScreen> {
                     style: const TextStyle(
                         fontSize: 20, fontWeight: FontWeight.w500),
                     decoration: const InputDecoration(
-                        contentPadding: EdgeInsets.all(10),
-                        border: OutlineInputBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        labelText: "Description",
-                        alignLabelWithHint: true,
-                        labelStyle: TextStyle(
-                            fontSize: 30,
-                            color: Color(0xffe5e5e5),
-                            fontWeight: FontWeight.w600)),
+                      contentPadding: EdgeInsets.all(10),
+                      border: OutlineInputBorder(),
+                      labelText: "Description",
+                      alignLabelWithHint: true,
+                    ),
                   ),
 
                   const SizedBox(
@@ -141,7 +121,7 @@ class _MyWidgetState extends State<CreateAdScreen> {
                   ),
                   //Submit Ad button
                   SizedBox(
-                    height: 70,
+                    height: 60,
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
@@ -150,15 +130,17 @@ class _MyWidgetState extends State<CreateAdScreen> {
                       style: ButtonStyle(
                         padding: MaterialStateProperty.all<EdgeInsets>(
                             const EdgeInsets.only(
-                                top: 15, bottom: 15, right: 30, left: 30)),
+                                top: 10, bottom: 10, right: 30, left: 30)),
                         elevation: MaterialStateProperty.all(0),
                         shape: MaterialStateProperty.all<OutlinedBorder>(
-                            const RoundedRectangleBorder()),
+                            const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5)))),
                       ),
                       child: const Text(
                         "Submit Ad",
                         style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.w700),
+                            fontSize: 18, fontWeight: FontWeight.w700),
                       ),
                     ),
                   ),

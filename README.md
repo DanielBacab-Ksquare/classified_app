@@ -6,9 +6,9 @@ Classified App by Daniel Bacab
 ## Starting the app
 ![Starting the app](./screenshots/1_starting.png)
 ## LoginScreen
-![LoginScreen](./screenshots/2_LoginScreen.png)
+![LoginScreen](./screenshots/2_LoginScreen_V2.png)
 ## RegisterScreen
-![RegisterScreen](./screenshots/3.png)
+![RegisterScreen](./screenshots/3_V2.png)
 ## HomeScreen
 ![HomeScreen](./screenshots/4_HomeScreen.png)
 ## SettingsScreen
@@ -22,6 +22,6 @@ Classified App by Daniel Bacab
 ## ProductDetailScreen
 ![ProductDetailScreen](./screenshots/9_ProductDetailScreen.png)
 ## CreateAdScreen
-![CreateAdScreen](./screenshots/10_CreateAdScreen.png)
+![CreateAdScreen](./screenshots/10_CreateAdScreen_V2.png)
 ## ImageViewerScreen
 ![ImageViewerScreen](./screenshots/11_ImageViewerScreen.png)

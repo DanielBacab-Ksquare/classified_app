@@ -26,13 +26,9 @@ class _MyWidgetState extends State<RegisterScreen> {
               ),
               const TextField(
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(0))),
+                    border: OutlineInputBorder(),
                     labelText: "Full Name",
-                    labelStyle: TextStyle(
-                        fontSize: 30,
-                        color: Color(0xffe5e5e5),
-                        fontWeight: FontWeight.w600)),
+                   ),
               ),
               const SizedBox(
                 height: 10,
@@ -40,13 +36,9 @@ class _MyWidgetState extends State<RegisterScreen> {
 
               const TextField(
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(0))),
+                    border: OutlineInputBorder(),
                     labelText: "Email Address",
-                    labelStyle: TextStyle(
-                        fontSize: 30,
-                        color: Color(0xffe5e5e5),
-                        fontWeight: FontWeight.w600)),
+                    ),
               ),
               const SizedBox(
                 height: 10,
@@ -54,13 +46,9 @@ class _MyWidgetState extends State<RegisterScreen> {
 
               const TextField(
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(0))),
+                    border: OutlineInputBorder(),
                     labelText: "Mobile Number",
-                    labelStyle: TextStyle(
-                        fontSize: 30,
-                        color: Color(0xffe5e5e5),
-                        fontWeight: FontWeight.w600)),
+              ),
               ),
               const SizedBox(
                 height: 10,
@@ -68,13 +56,9 @@ class _MyWidgetState extends State<RegisterScreen> {
 
               const TextField(
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(0))),
+                    border: OutlineInputBorder(),
                     labelText: "Password",
-                    labelStyle: TextStyle(
-                        fontSize: 30,
-                        color: Color(0xffe5e5e5),
-                        fontWeight: FontWeight.w600)),
+            ),
               ),
               const SizedBox(
                 height: 15,
@@ -99,7 +83,7 @@ class _MyWidgetState extends State<RegisterScreen> {
                   ),
                   child: const Text(
                     "Register Now",
-                    style: TextStyle(fontSize: 27, fontWeight: FontWeight.w700),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
                 ),
               ),
